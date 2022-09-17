@@ -12,9 +12,9 @@ interface AppInterfaces {
     }
 
     interface Model {
-        fun getCurrLetter()
+        fun getCurrLetter(): Int
         fun getLetterImage(): Int
-        fun setCurrLetter(i: String)
+        fun setCurrLetter(i: Int)
     }
 
     interface Presenter {

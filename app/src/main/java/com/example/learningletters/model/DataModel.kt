@@ -11,16 +11,16 @@ class LetterPageActivityModel: AppInterfaces.Model{
         R.drawable.slide24, R.drawable.slide25, R.drawable.slide26
     )
 
-    private var currLetter = "A";
-    override fun getCurrLetter() {
-        TODO("Not yet implemented")
+    private var currLetter = 0;
+    override fun getCurrLetter():Int {
+        return currLetter;
     }
 
     override fun  getLetterImage():Int {
-        return images[0]
+        return images[currLetter]
     }
 
-    override fun setCurrLetter(i: String) {
+    override fun setCurrLetter(i: Int) {
         currLetter = i;
     }
 }

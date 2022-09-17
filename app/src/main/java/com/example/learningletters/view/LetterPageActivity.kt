@@ -35,7 +35,7 @@ class LetterPageActivity : AppCompatActivity(),AppInterfaces.View {
     }
 
     override fun updatePage() {
-        super.updatePage()
+       // super.updatePage()
         setImageRes()
     }
 

@@ -14,13 +14,14 @@ class MainActivity: AppCompatActivity(){
 
     }
 
-
      fun openLetterPage(v: View) {
+         // get letter no from id
         val b = v as Button
+        val letterNo:String  = b.id.toString().subSequence(1, b.id.toString().lastIndex).toString()
 
-        val buttonText = b.text.toString()
+         // send data to letter page
         intent = Intent(this,LetterPageActivity::class.java)
-        intent.putExtra("CURR_LETTER" , buttonText)
+        intent.putExtra("CURR_LETTER" , letterNo.toInt()-1)
         startActivity(intent)
     }
 }
