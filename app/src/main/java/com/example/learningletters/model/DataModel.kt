@@ -11,16 +11,36 @@ class LetterPageActivityModel: AppInterfaces.Model{
         R.drawable.slide24, R.drawable.slide25, R.drawable.slide26
     )
 
-    private var currLetter = 0;
-    override fun getCurrLetter():Int {
-        return currLetter;
+    private var _currIndex = 0;
+    override fun getLetterIndex():Int {
+        return _currIndex;
     }
 
     override fun  getLetterImage():Int {
-        return images[currLetter]
+        return images[_currIndex]
     }
 
-    override fun setCurrLetter(i: Int) {
-        currLetter = i;
+    override fun setIndex(i: Int) {
+        _currIndex = i;
+    }
+
+    override  fun incrementIndex(){
+        val temp: Int = _currIndex +1;
+
+        if (temp > images.size-1){
+            // throw error
+        } else {
+            _currIndex = temp;
+        }
+    }
+
+    override  fun decrementIndex(){
+        val temp: Int = _currIndex +1;
+
+        if (temp < 0){
+            // throw error
+        } else {
+            _currIndex = temp;
+        }
     }
 }

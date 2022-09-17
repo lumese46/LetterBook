@@ -8,7 +8,7 @@ class LetterActivityPresenter(_view: LetterPageActivity): AppInterfaces.Presente
         val bundle =  _view.intent.extras
         val currLetter = bundle!!.getInt("CURR_LETTER")
         if (currLetter != null) {
-            dataModel.setCurrLetter(currLetter)
+            dataModel.setIndex(currLetter)
         }
         _view.initView()
     }
@@ -16,45 +16,24 @@ class LetterActivityPresenter(_view: LetterPageActivity): AppInterfaces.Presente
     override fun getLetterImage():Int = dataModel.getLetterImage()
 
     override fun firstImage() {
-        val currLetter = 0
-        setLetter(currLetter)
+        dataModel.setIndex(0)
         view.updatePage()
     }
 
     override fun lastImage() {
-
-        val currLetter = 25
-        setLetter(currLetter)
+        dataModel.setIndex(25)
         view.updatePage()
     }
 
     override fun nextImage() {
-        val currLetter: Int = dataModel.getCurrLetter()+1
-        if(currLetter > 25){
-            // reached last letter
-        } else {
-            setLetter(currLetter)
-        }
+        dataModel.incrementIndex()
         view.updatePage()
     }
 
     override fun prevImage() {
-        val currLetter: Int = dataModel.getCurrLetter()-1
-        if(currLetter < 0){
-            // reached last letter
-        } else {
-            setLetter(currLetter)
-        }
+        dataModel.decrementIndex()
         view.updatePage()
     }
-
-
-    fun setLetter(letter:Int){
-        if (letter != null) {
-            dataModel.setCurrLetter(letter)
-        }
-    }
-
 
 
 
