@@ -1,5 +1,7 @@
 package com.example.learningletters
 
+import kotlin.properties.Delegates
+
 class LetterPageActivityModel: AppInterfaces.Model{
     private val images = intArrayOf(
         R.drawable.slide01, R.drawable.slide02, R.drawable.slide03,
@@ -11,12 +13,13 @@ class LetterPageActivityModel: AppInterfaces.Model{
         R.drawable.slide24, R.drawable.slide25, R.drawable.slide26
     )
 
-    private var _currIndex = 0;
+    private var _currIndex by Delegates.notNull<Int>();
     override fun getLetterIndex():Int {
         return _currIndex;
     }
 
     override fun  getLetterImage():Int {
+
         return images[_currIndex]
     }
 
@@ -26,7 +29,7 @@ class LetterPageActivityModel: AppInterfaces.Model{
 
     override  fun incrementIndex(): Boolean{
         val temp: Int = _currIndex +1;
-        println("Next to" + temp)
+
 
         if (temp > images.size-1){
             // throw error

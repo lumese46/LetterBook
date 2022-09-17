@@ -5,16 +5,21 @@ class LetterActivityPresenter(_view: LetterPageActivity): AppInterfaces.Presente
     private var dataModel: AppInterfaces.Model = LetterPageActivityModel()
 
     init {
-        val bundle =  _view.intent.extras
+        val bundle =  view.intent.extras
         val currLetter = bundle!!.getInt("CURR_LETTER")
-        if (currLetter != null) {
-            dataModel.setIndex(currLetter)
-        }
-        println("Index:" + currLetter)
-        _view.initView()
+        println("Set Index to " + currLetter)
+        dataModel.setIndex(currLetter)
+
+        println("First Selected" + currLetter)
+        view.initView()
+        view.updatePage()
     }
 
-    override fun getLetterImage():Int = dataModel.getLetterImage()
+    override fun getLetterImage():Int {
+        println("Index fetched" + dataModel.getLetterIndex())
+        return    dataModel.getLetterImage()
+
+    }
 
     override fun goToFirst() {
         dataModel.setIndex(0)
@@ -34,7 +39,6 @@ class LetterActivityPresenter(_view: LetterPageActivity): AppInterfaces.Presente
 
     override fun goToPrev() {
         if(dataModel.decrementIndex()) {
-
             view.updatePage()
         }
     }

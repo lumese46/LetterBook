@@ -7,291 +7,291 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/buttonA"
+        android:id="@+id/L1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="4dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_A"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonB"
+        android:id="@+id/L2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="4dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_B"
-        app:layout_constraintStart_toEndOf="@+id/buttonA"
+        app:layout_constraintStart_toEndOf="@+id/L1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonC"
+        android:id="@+id/L3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="4dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/buttonB"
+        app:layout_constraintStart_toEndOf="@+id/L2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonD"
+        android:id="@+id/L4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:layout_marginTop="32dp"
         android:text="@string/LETTER_D"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonA" />
+        app:layout_constraintTop_toBottomOf="@+id/L1" />
 
     <Button
-        android:id="@+id/buttonE"
+        android:id="@+id/L5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="32dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_E"
-        app:layout_constraintStart_toEndOf="@+id/buttonD"
-        app:layout_constraintTop_toBottomOf="@+id/buttonB" />
+        app:layout_constraintStart_toEndOf="@+id/L4"
+        app:layout_constraintTop_toBottomOf="@+id/L2" />
 
     <Button
-        android:id="@+id/buttonF"
+        android:id="@+id/L6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_F"
-        app:layout_constraintStart_toEndOf="@+id/buttonE"
-        app:layout_constraintTop_toBottomOf="@+id/buttonC" />
+        app:layout_constraintStart_toEndOf="@+id/L5"
+        app:layout_constraintTop_toBottomOf="@+id/L3" />
 
     <Button
-        android:id="@+id/buttonG"
+        android:id="@+id/L7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="28dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_G"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonD" />
+        app:layout_constraintTop_toBottomOf="@+id/L4" />
 
     <Button
-        android:id="@+id/buttonH"
+        android:id="@+id/L8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="28dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_H"
-        app:layout_constraintStart_toEndOf="@+id/buttonG"
-        app:layout_constraintTop_toBottomOf="@+id/buttonE" />
+        app:layout_constraintStart_toEndOf="@+id/L7"
+        app:layout_constraintTop_toBottomOf="@+id/L5" />
 
     <Button
-        android:id="@+id/buttonI"
+        android:id="@+id/L9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:layout_marginTop="28dp"
         android:text="@string/LETTER_I"
-        app:layout_constraintStart_toEndOf="@+id/buttonH"
-        app:layout_constraintTop_toBottomOf="@+id/buttonF" />
+        app:layout_constraintStart_toEndOf="@+id/L8"
+        app:layout_constraintTop_toBottomOf="@+id/L6" />
 
     <Button
-        android:id="@+id/buttonJ"
+        android:id="@+id/L10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:layout_marginTop="36dp"
         android:text="@string/LETTER_J"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonG" />
+        app:layout_constraintTop_toBottomOf="@+id/L7" />
 
     <Button
-        android:id="@+id/buttonK"
+        android:id="@+id/L11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="36dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_K"
-        app:layout_constraintStart_toEndOf="@+id/buttonJ"
-        app:layout_constraintTop_toBottomOf="@+id/buttonH" />
+        app:layout_constraintStart_toEndOf="@+id/L10"
+        app:layout_constraintTop_toBottomOf="@+id/L8" />
 
     <Button
-        android:id="@+id/buttonL"
+        android:id="@+id/L12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="36dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_L"
-        app:layout_constraintStart_toEndOf="@+id/buttonK"
-        app:layout_constraintTop_toBottomOf="@+id/buttonI" />
+        app:layout_constraintStart_toEndOf="@+id/L11"
+        app:layout_constraintTop_toBottomOf="@+id/L9" />
 
     <Button
-        android:id="@+id/buttonM"
+        android:id="@+id/L13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="32dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_M"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonJ" />
+        app:layout_constraintTop_toBottomOf="@+id/L10" />
 
     <Button
-        android:id="@+id/buttonN"
+        android:id="@+id/L14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="32dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_N"
-        app:layout_constraintStart_toEndOf="@+id/buttonM"
-        app:layout_constraintTop_toBottomOf="@+id/buttonK" />
+        app:layout_constraintStart_toEndOf="@+id/L13"
+        app:layout_constraintTop_toBottomOf="@+id/L11" />
 
     <Button
-        android:id="@+id/buttonO"
+        android:id="@+id/L15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_O"
-        app:layout_constraintStart_toEndOf="@+id/buttonN"
-        app:layout_constraintTop_toBottomOf="@+id/buttonL" />
+        app:layout_constraintStart_toEndOf="@+id/L14"
+        app:layout_constraintTop_toBottomOf="@+id/L12" />
 
     <Button
-        android:id="@+id/buttonP"
+        android:id="@+id/L16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="32dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_P"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonM" />
+        app:layout_constraintTop_toBottomOf="@+id/L13" />
 
     <Button
-        android:id="@+id/buttonQ"
+        android:id="@+id/L17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="32dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_Q"
-        app:layout_constraintStart_toEndOf="@+id/buttonP"
-        app:layout_constraintTop_toBottomOf="@+id/buttonN" />
+        app:layout_constraintStart_toEndOf="@+id/L16"
+        app:layout_constraintTop_toBottomOf="@+id/L14" />
 
     <Button
-        android:id="@+id/buttonR"
+        android:id="@+id/L18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_R"
-        app:layout_constraintStart_toEndOf="@+id/buttonQ"
-        app:layout_constraintTop_toBottomOf="@+id/buttonO" />
+        app:layout_constraintStart_toEndOf="@+id/L17"
+        app:layout_constraintTop_toBottomOf="@+id/L15" />
 
     <Button
-        android:id="@+id/buttonS"
+        android:id="@+id/L19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:layout_marginTop="36dp"
         android:text="@string/LETTER_S"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonP" />
+        app:layout_constraintTop_toBottomOf="@+id/L16" />
 
     <Button
-        android:id="@+id/buttonT"
+        android:id="@+id/L20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="36dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_T"
-        app:layout_constraintStart_toEndOf="@+id/buttonS"
-        app:layout_constraintTop_toBottomOf="@+id/buttonQ" />
+        app:layout_constraintStart_toEndOf="@+id/L19"
+        app:layout_constraintTop_toBottomOf="@+id/L17" />
 
     <Button
-        android:id="@+id/buttonU"
+        android:id="@+id/L21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="36dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_U"
-        app:layout_constraintStart_toEndOf="@+id/buttonT"
-        app:layout_constraintTop_toBottomOf="@+id/buttonR" />
+        app:layout_constraintStart_toEndOf="@+id/L20"
+        app:layout_constraintTop_toBottomOf="@+id/L18" />
 
     <Button
-        android:id="@+id/buttonV"
+        android:id="@+id/L22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="28dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_V"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonS" />
+        app:layout_constraintTop_toBottomOf="@+id/L19" />
 
     <Button
-        android:id="@+id/buttonW"
+        android:id="@+id/L23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="28dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
 
         android:text="@string/LETTER_W"
-        app:layout_constraintStart_toEndOf="@+id/buttonV"
-        app:layout_constraintTop_toBottomOf="@+id/buttonT" />
+        app:layout_constraintStart_toEndOf="@+id/L22"
+        app:layout_constraintTop_toBottomOf="@+id/L20" />
 
     <Button
-        android:id="@+id/buttonX"
+        android:id="@+id/L24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="28dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_X"
-        app:layout_constraintStart_toEndOf="@+id/buttonW"
-        app:layout_constraintTop_toBottomOf="@+id/buttonU" />
+        app:layout_constraintStart_toEndOf="@+id/L23"
+        app:layout_constraintTop_toBottomOf="@+id/L21" />
 
     <Button
-        android:id="@+id/buttonY"
+        android:id="@+id/L25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="32dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_Y"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonV" />
+        app:layout_constraintTop_toBottomOf="@+id/L22" />
 
     <Button
-        android:id="@+id/buttonZ"
+        android:id="@+id/L26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="32dp"
-        android:onClick="toPage_A_Button"
+        android:onClick="openLetterPage"
         android:text="@string/LETTER_Z"
-        app:layout_constraintStart_toEndOf="@+id/buttonY"
-        app:layout_constraintTop_toBottomOf="@+id/buttonW" />
+        app:layout_constraintStart_toEndOf="@+id/L25"
+        app:layout_constraintTop_toBottomOf="@+id/L23" />
 </androidx.constraintlayout.widget.ConstraintLayout>

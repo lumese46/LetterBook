@@ -13,6 +13,7 @@ class MainActivity: AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.title = "Overview"
 
     }
 
@@ -25,26 +26,26 @@ class MainActivity: AppCompatActivity(){
 
 
          // send data to letter page
-        intent = Intent(this,LetterPageActivity::class.java)
+        intent = Intent(this, LetterPageActivity::class.java)
         intent.putExtra("CURR_LETTER" , letterNo)
         startActivity(intent)
     }
 
     // State Management
-    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
-        super.onSaveInstanceState(outState, outPersistentState)
-//        if(selectedButton != null) {
-//            outState.putInt("CURR_LETTER", selectedButton.id)
-//        }
-    }
-
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-//        if(selectedButton != null) {
-//            selectedButton.id = savedInstanceState.getInt("CURR_LETTER")
-//            openLetterPage(selectedButton)
-//        }
-    }
+//    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+//        super.onSaveInstanceState(outState, outPersistentState)
+////        if(selectedButton != null) {
+////            outState.putInt("CURR_LETTER", selectedButton.id)
+////        }
+//    }
+//
+//    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+//        super.onRestoreInstanceState(savedInstanceState)
+////        if(selectedButton != null) {
+////            selectedButton.id = savedInstanceState.getInt("CURR_LETTER")
+////            openLetterPage(selectedButton)
+////        }
+//    }
 
 
     private fun getCharForNumber(i: Char): Int {

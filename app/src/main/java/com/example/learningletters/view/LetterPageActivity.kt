@@ -7,16 +7,18 @@ import androidx.appcompat.app.AppCompatActivity
 
 class LetterPageActivity : AppCompatActivity(),AppInterfaces.View {
     private  var presenter: LetterActivityPresenter? = null
-    private var imageView: ImageView?=null;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_letterpage)
+
         // set presenter and pass cview
         presenter = LetterActivityPresenter(this);
+        initView()
     }
 
     override fun initView() {
+
         setImageRes()
         // set button listeners
         val firstB = findViewById<Button>(R.id.FISRT)
@@ -31,6 +33,8 @@ class LetterPageActivity : AppCompatActivity(),AppInterfaces.View {
         val prevB = findViewById<Button>(R.id.PREV)
         prevB.setOnClickListener { presenter?.goToPrev() }
 
+
+
     }
 
     override fun updatePage() {
@@ -39,7 +43,7 @@ class LetterPageActivity : AppCompatActivity(),AppInterfaces.View {
     }
 
     fun setImageRes(){
-        imageView = findViewById<ImageView>(R.id.imageView)
+        var imageView = findViewById<ImageView>(R.id.imageView)
         var currImage: Int? = presenter?.getLetterImage();
         with(imageView) {
             if (currImage != null) {

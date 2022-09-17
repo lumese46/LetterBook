@@ -13,11 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearningLetters"
         tools:targetApi="31">
+
         <activity
-            android:name=".LETTERPAGE_E"
-            android:exported="false" />
-        <activity
-            android:name=".LETTERPAGE"
+            android:name=".LetterPageActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
