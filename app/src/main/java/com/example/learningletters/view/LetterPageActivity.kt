@@ -11,6 +11,9 @@ class LetterPageActivity : AppCompatActivity(),AppInterfaces.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_letterpage)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Letter"
+       
 
         // set presenter and pass cview
         presenter = LetterActivityPresenter(this);

@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity: AppCompatActivity(){
 
-    //val selectedButton: Button? = null;
+    var selectedButton: Button? = null;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,9 +20,9 @@ class MainActivity: AppCompatActivity(){
      fun openLetterPage(v: View) {
 
          // get letter no from id
-        val selectedButton = v as Button
+         selectedButton = v as Button
 
-        val letterNo:Int  = getCharForNumber(selectedButton.text.get(0))
+        val letterNo:Int  = getCharForNumber(selectedButton!!.text.get(0))
 
 
          // send data to letter page
@@ -31,21 +31,21 @@ class MainActivity: AppCompatActivity(){
         startActivity(intent)
     }
 
-    // State Management
-//    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
-//        super.onSaveInstanceState(outState, outPersistentState)
-////        if(selectedButton != null) {
-////            outState.putInt("CURR_LETTER", selectedButton.id)
-////        }
-//    }
-//
-//    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-//        super.onRestoreInstanceState(savedInstanceState)
-////        if(selectedButton != null) {
-////            selectedButton.id = savedInstanceState.getInt("CURR_LETTER")
-////            openLetterPage(selectedButton)
-////        }
-//    }
+//     State Management
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        super.onSaveInstanceState(outState, outPersistentState)
+        if(selectedButton != null) {
+            outState.putInt("CURR_LETTER", selectedButton!!.id)
+        }
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        if(selectedButton != null) {
+            selectedButton!!.id = savedInstanceState.getInt("CURR_LETTER")
+            openLetterPage(selectedButton!!)
+        }
+    }
 
 
     private fun getCharForNumber(i: Char): Int {

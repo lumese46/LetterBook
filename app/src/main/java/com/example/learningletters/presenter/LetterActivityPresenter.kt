@@ -12,7 +12,7 @@ class LetterActivityPresenter(_view: LetterPageActivity): AppInterfaces.Presente
 
         println("First Selected" + currLetter)
         view.initView()
-        view.updatePage()
+       // view.updatePage()
     }
 
     override fun getLetterImage():Int {
