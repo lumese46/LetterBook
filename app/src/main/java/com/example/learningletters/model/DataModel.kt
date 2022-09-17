@@ -24,23 +24,28 @@ class LetterPageActivityModel: AppInterfaces.Model{
         _currIndex = i;
     }
 
-    override  fun incrementIndex(){
+    override  fun incrementIndex(): Boolean{
         val temp: Int = _currIndex +1;
+        println("Next to" + temp)
 
         if (temp > images.size-1){
             // throw error
+            return false
         } else {
             _currIndex = temp;
+            return true
         }
     }
 
-    override  fun decrementIndex(){
-        val temp: Int = _currIndex +1;
+    override  fun decrementIndex(): Boolean{
+        val temp: Int = _currIndex -1;
 
-        if (temp < 0){
+        if (temp < 0||temp > images.size-1){
             // throw error
+            return false
         } else {
             _currIndex = temp;
+            return true
         }
     }
 }

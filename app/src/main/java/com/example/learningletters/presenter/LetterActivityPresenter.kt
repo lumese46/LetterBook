@@ -10,32 +10,34 @@ class LetterActivityPresenter(_view: LetterPageActivity): AppInterfaces.Presente
         if (currLetter != null) {
             dataModel.setIndex(currLetter)
         }
+        println("Index:" + currLetter)
         _view.initView()
     }
 
     override fun getLetterImage():Int = dataModel.getLetterImage()
 
-    override fun firstImage() {
+    override fun goToFirst() {
         dataModel.setIndex(0)
         view.updatePage()
     }
 
-    override fun lastImage() {
+    override fun goToLast() {
         dataModel.setIndex(25)
         view.updatePage()
     }
 
-    override fun nextImage() {
-        dataModel.incrementIndex()
-        view.updatePage()
+    override fun goToNext() {
+        if(dataModel.incrementIndex()) {
+            view.updatePage()
+        }
     }
 
-    override fun prevImage() {
-        dataModel.decrementIndex()
-        view.updatePage()
+    override fun goToPrev() {
+        if(dataModel.decrementIndex()) {
+
+            view.updatePage()
+        }
     }
-
-
 
 
 }

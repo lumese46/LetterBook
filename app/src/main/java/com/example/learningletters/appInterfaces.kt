@@ -15,16 +15,16 @@ interface AppInterfaces {
         fun getLetterIndex(): Int
         fun getLetterImage(): Int
         fun setIndex(i: Int)
-        fun incrementIndex()
-        fun decrementIndex()
+        fun incrementIndex(): Boolean
+        fun decrementIndex(): Boolean
     }
 
     interface Presenter {
         fun getLetterImage(): Int
-        fun firstImage()
-        fun lastImage()
-        fun nextImage()
-        fun prevImage()
+        fun goToFirst()
+        fun goToLast()
+        fun goToNext()
+        fun goToPrev()
 
 
     }

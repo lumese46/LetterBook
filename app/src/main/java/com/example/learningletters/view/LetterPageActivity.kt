@@ -1,7 +1,6 @@
 package com.example.learningletters
 
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
@@ -21,16 +20,16 @@ class LetterPageActivity : AppCompatActivity(),AppInterfaces.View {
         setImageRes()
         // set button listeners
         val firstB = findViewById<Button>(R.id.FISRT)
-        firstB.setOnClickListener{ presenter?.firstImage() }
+        firstB.setOnClickListener{ presenter?.goToFirst() }
 
         val lastB = findViewById<Button>(R.id.LAST)
-        lastB.setOnClickListener{ presenter?.lastImage() }
+        lastB.setOnClickListener{ presenter?.goToLast() }
 
         val nextB = findViewById<Button>(R.id.NEXT)
-        nextB.setOnClickListener { presenter?.nextImage() }
+        nextB.setOnClickListener { presenter?.goToNext() }
 
         val prevB = findViewById<Button>(R.id.PREV)
-        prevB.setOnClickListener { presenter?.prevImage() }
+        prevB.setOnClickListener { presenter?.goToPrev() }
 
     }
 
