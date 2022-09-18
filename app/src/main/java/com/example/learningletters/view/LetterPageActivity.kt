@@ -1,5 +1,6 @@
 package com.example.learningletters
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.widget.Button
@@ -12,22 +13,20 @@ class LetterPageActivity : AppCompatActivity(),AppInterfaces.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_letterpage)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
         supportActionBar?.title = "Letter"
-        var thisView = this;
-        // Check whether we're recreating a previously destroyed instance
-        if (savedInstanceState != null) {
-            with(savedInstanceState) {
-                // Restore value of members from saved state
-                println("Saved Index"+ this.get("CURR_INDEX"))
-                presenter = LetterActivityPresenter(thisView);
-                initView()
-            }
-        }
-
         // set presenter and pass cview
-        presenter = LetterActivityPresenter(thisView);
+        presenter = LetterActivityPresenter(this);
         initView()
+    }
+
+
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        super.onSaveInstanceState(outState, outPersistentState)
+        val bundle = intent.extras
+        val currIndex = bundle!!.getInt("CURR_LETTER")
+        outState.putInt("CURR_LETTER",currIndex)
+        println("State Saved")
     }
 
     override fun initView() {
@@ -46,12 +45,15 @@ class LetterPageActivity : AppCompatActivity(),AppInterfaces.View {
         val prevB = findViewById<Button>(R.id.PREV)
         prevB.setOnClickListener { presenter?.goToPrev() }
 
+        val overviewB = findViewById<Button>(R.id.OVERVIEW)
+        overviewB.setOnClickListener { presenter?.goToOverview() }
+
 
 
     }
 
     override fun updatePage() {
-       // super.updatePage()
+        // super.updatePage()
         setImageRes()
     }
 
@@ -65,14 +67,9 @@ class LetterPageActivity : AppCompatActivity(),AppInterfaces.View {
         }
     }
 
-    //     State Management
-    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
-        super.onSaveInstanceState(outState, outPersistentState)
-        println("Saving State")
-        val bundle =  intent.extras
-        val currIndex = bundle!!.getInt("CURR_INDEX")
-        outState.putInt("CURR_INDEX", currIndex)
-
+    override fun openOverviewPage() {
+        intent = Intent(this, LetterPageActivity::class.java)
+        startActivity(intent)
     }
 
 }

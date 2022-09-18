@@ -43,6 +43,10 @@ class LetterActivityPresenter(_view: LetterPageActivity): AppInterfaces.Presente
             view.updatePage()
         }
     }
+    override  fun goToOverview(){
+        view.openOverviewPage()
+    }
+
 
 
 }

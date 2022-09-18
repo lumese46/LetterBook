@@ -16,30 +16,19 @@ class MainActivity: AppCompatActivity(){
         setContentView(R.layout.activity_main)
         supportActionBar?.title = "Overview"
 
-
-
-
-
     }
 
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        var index = savedInstanceState.getInt("CURR_LETTER")
-        startActivity(intent
-        )
-    }
+    fun openLetterPage(v: View) {
 
-     fun openLetterPage(v: View) {
-
-         // get letter no from id
-         selectedButton = v as Button
+        // get letter no from id
+        selectedButton = v as Button
 
         val letterNo:Int  = getCharForNumber(selectedButton!!.text.get(0))
 
 
-         // send data to letter page
+        // send data to letter page
         intent = Intent(this, LetterPageActivity::class.java)
-        intent.putExtra("CURR_LETTER" , letterNo)
+        intent.putExtra("CURR_INDEX" , letterNo)
         startActivity(intent)
     }
 
