@@ -3,6 +3,7 @@ package  com.example.learningletters
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +16,17 @@ class MainActivity: AppCompatActivity(){
         setContentView(R.layout.activity_main)
         supportActionBar?.title = "Overview"
 
+
+
+
+
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        var index = savedInstanceState.getInt("CURR_LETTER")
+        startActivity(intent
+        )
     }
 
      fun openLetterPage(v: View) {
@@ -31,21 +43,7 @@ class MainActivity: AppCompatActivity(){
         startActivity(intent)
     }
 
-//     State Management
-    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
-        super.onSaveInstanceState(outState, outPersistentState)
-        if(selectedButton != null) {
-            outState.putInt("CURR_LETTER", selectedButton!!.id)
-        }
-    }
 
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        if(selectedButton != null) {
-            selectedButton!!.id = savedInstanceState.getInt("CURR_LETTER")
-            openLetterPage(selectedButton!!)
-        }
-    }
 
 
     private fun getCharForNumber(i: Char): Int {

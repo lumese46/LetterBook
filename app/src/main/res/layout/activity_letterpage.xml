@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LetterPageActivity">
@@ -17,31 +15,31 @@
         android:layout_width="402dp"
         android:layout_height="541dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
 
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
-   <LinearLayout
+    <LinearLayout
        android:layout_width="match_parent"
-       android:layout_height="wrap_content"
+       android:layout_height="match_parent"
        android:orientation="horizontal"
 
        app:layout_constraintBottom_toBottomOf="@+id/imageView"
 
        >
 
-    <Button
-        android:id="@+id/FISRT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:text="FIRST"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.225" />
+       <Button
+           android:id="@+id/FISRT"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="4dp"
+           android:layout_marginTop="16dp"
+           android:text="@string/FIRST"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/imageView"
+           app:layout_constraintVertical_bias="0.225" />
 
     <Button
         android:id="@+id/PREV"
@@ -49,32 +47,46 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
-        android:text="PREV"
+        android:text="@string/PREV"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/FISRT"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.225"/>
 
-    <Button
-        android:id="@+id/NEXT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:text="NEXT"
-        app:layout_constraintStart_toEndOf="@+id/PREV"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+       <Button
+           android:id="@+id/NEXT"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="4dp"
+           android:layout_marginTop="16dp"
+           android:text="@string/NEXT"
+           app:layout_constraintStart_toEndOf="@+id/PREV"
+           app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+       <Button
+           android:id="@+id/LAST"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="4dp"
+           android:layout_marginTop="16dp"
+           android:text="@string/LAST"
+           app:layout_constraintStart_toEndOf="@+id/NEXT"
+           app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+   </LinearLayout>
 
     <Button
-        android:id="@+id/LAST"
+        android:id="@+id/OVERVIEW"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:text="LAST"
-        app:layout_constraintStart_toEndOf="@+id/NEXT"
+        android:layout_marginTop="8dp"
+        android:text="@string/OVERVIEW"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
-   </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,8 @@
 package com.example.learningletters
 
+import android.content.Intent
+import androidx.core.content.ContextCompat.startActivity
+
 class LetterActivityPresenter(_view: LetterPageActivity): AppInterfaces.Presenter{
     private var view: LetterPageActivity = _view;
     private var dataModel: AppInterfaces.Model = LetterPageActivityModel()
@@ -7,10 +10,9 @@ class LetterActivityPresenter(_view: LetterPageActivity): AppInterfaces.Presente
     init {
         val bundle =  view.intent.extras
         val currLetter = bundle!!.getInt("CURR_LETTER")
-        println("Set Index to " + currLetter)
         dataModel.setIndex(currLetter)
 
-        println("First Selected" + currLetter)
+
         view.initView()
        // view.updatePage()
     }
@@ -41,6 +43,10 @@ class LetterActivityPresenter(_view: LetterPageActivity): AppInterfaces.Presente
         if(dataModel.decrementIndex()) {
             view.updatePage()
         }
+    }
+
+    override  fun goToOverview(){
+       view.openOverviewPage()
     }
 
 

@@ -9,6 +9,9 @@ interface AppInterfaces {
         fun updatePage() {
             TODO("Not yet implemented")
         }
+
+        fun openOverviewPage()
+
     }
 
     interface Model {
@@ -27,5 +30,6 @@ interface AppInterfaces {
         fun goToPrev()
 
 
+        fun goToOverview()
     }
 }

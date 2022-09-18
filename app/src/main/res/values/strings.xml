@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">LearningLetters</string>
+    <string name="OVERVIEW">OVERVIEW</string>
+    <string name="FIRST">FIRST</string>
+    <string name="PREV">PREV</string>
+    <string name="NEXT">NEXT</string>
+    <string name="LAST">LAST</string>
+
+
+
+
+
+
     <string name="LETTER_A">A</string>
     <string name="LETTER_B">B</string>
     <string name="LETTER_C">C</string>

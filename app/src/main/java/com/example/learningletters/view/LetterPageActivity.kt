@@ -1,9 +1,12 @@
 package com.example.learningletters
 
+import android.content.Intent
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 
 class LetterPageActivity : AppCompatActivity(),AppInterfaces.View {
     private  var presenter: LetterActivityPresenter? = null
@@ -11,13 +14,20 @@ class LetterPageActivity : AppCompatActivity(),AppInterfaces.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_letterpage)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
         supportActionBar?.title = "Letter"
-       
-
         // set presenter and pass cview
         presenter = LetterActivityPresenter(this);
         initView()
+    }
+
+
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        super.onSaveInstanceState(outState, outPersistentState)
+        val bundle = intent.extras
+        val currIndex = bundle!!.getInt("CURR_LETTER")
+        outState.putInt("CURR_LETTER",currIndex)
+        println("State Saved")
     }
 
     override fun initView() {
@@ -36,6 +46,9 @@ class LetterPageActivity : AppCompatActivity(),AppInterfaces.View {
         val prevB = findViewById<Button>(R.id.PREV)
         prevB.setOnClickListener { presenter?.goToPrev() }
 
+        val overviewB = findViewById<Button>(R.id.OVERVIEW)
+        overviewB.setOnClickListener { presenter?.goToOverview() }
+
 
 
     }
@@ -53,6 +66,11 @@ class LetterPageActivity : AppCompatActivity(),AppInterfaces.View {
                 this?.setImageResource(currImage)
             }
         }
+    }
+
+    override fun openOverviewPage() {
+         intent = Intent(this, LetterPageActivity::class.java)
+        startActivity(intent)
     }
 
 
